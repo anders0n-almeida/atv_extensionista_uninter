@@ -1,0 +1,5 @@
+-- Criando o banco de dados do projeto
+CREATE DATABASE atv_ext;
+
+-- Selecionando o banco de dados criando anteriormente para uso
+USE atv_ext;
