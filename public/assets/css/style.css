@@ -92,13 +92,14 @@
 
 #courses-section {
     background-color: var(--color-dark-blue);
-    padding-block: 25px;
+    padding-top: 25px;
 }
 
 .course-box {
     background-color: var(--color-white);
     border-radius: 10px;
     padding: 10px;
+    text-decoration: none;
 }
 
 .course-box > h4 {
@@ -106,10 +107,35 @@
     text-align: center;
 }
 
+.course-box > p {
+    color: #000;
+}
+
+.course-box:hover {
+    background-color: var(--color-dark-coin);
+}
+
+#all-courses-link {
+    background-color: var(--color-dark-blue);
+    padding-top: 5px;
+}
+
+#all-courses-link a {
+    color: #fff;
+}
+
+#all-courses-link a:hover {
+    color: var(--color-coin);
+    transition: 0.5s;
+}
+
 /* Ajustes responsivos */
 @media (max-width: 576px) {
     .course-box {
         width: 90%;
+    }
+    #all-courses-link{
+        text-align: center;
     }
 }
 
@@ -117,12 +143,76 @@
     .course-box {
         width: 25%;
     }
+    #all-courses-link{
+        text-align: end;
+        padding-right: 50px;
+    }
 }
 
 @media (min-width: 992px) {
     .course-box {
         width: 16.66666667%;
     }
+    #all-courses-link{
+        text-align: end;
+        padding-right: 100px;
+    }
 }
 /* /Ajustes responsivos */
+/**********************************************************************************************/
+
+/* SEÇÃO DE NOTÍCIAS **************************************************************************/
+
+.goto-read-link:hover {
+    color: var(--color-dark-blue);
+    transition: 0.5s;
+}
+
+#featured-news > img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#featured-news > h2 {
+    text-align: justify;
+}
+
+.adjacent-news-box > img {
+    width: 100%;
+    height: 150px;
+}
+
+.adjacent-news-box > h2 {
+    font-size: 1em;
+    text-align: justify;
+}
+
+.adjacent-news-box > p {
+    font-size: 0.90em;
+}
+
+/**********************************************************************************************/
+
+/* RODAPÉ/FOOTER ******************************************************************************/
+
+#page-footer {
+    background-color: #323232;
+    color: #fff;
+    padding-block: 15px;
+}
+
+.socials-label {
+    color: #fff;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.socials-label:hover {
+    color: var(--color-coin);
+    transition: 0.5s;
+}
+
 /**********************************************************************************************/
