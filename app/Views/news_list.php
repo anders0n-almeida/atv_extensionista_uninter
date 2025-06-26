@@ -27,6 +27,13 @@
     .news-box:hover {
         background-color: var(--color-medium-blue);
     }
+    /* Ajustes responsivos */
+    @media (max-width: 766px) {
+        .news-box img {
+            width: 90%;
+        }
+    }
+    /* /Ajustes responsivos */
 </style>
 
 <div id="full-page">
@@ -38,13 +45,13 @@
 
                 <?php foreach($lista_noticias as $noticia): ?>
                     <a href="<?= site_url('/noticias/' . $noticia->id) ?>" class="news-box">
-                        <div class="d-flex align-items-center">
+                        <div class="row align-items-center">
 
-                            <div class="col-md-3" style="text-align: center;">
+                            <div class="col-sm-12 col-md-3" style="text-align: center;">
                                 <img src="<?= base_url('assets/news/' . $noticia->nome_arq_imagem) ?>" alt="Imagem da notícia <?= $noticia->id ?>" class="img-fluid">
                             </div>
 
-                            <div class="col-md-9">
+                            <div class="col-sm-12 col-md-9">
                                 <h4><?= $noticia->titulo ?></h4>
                                 <p>
                                     <span class="publicador-data">
