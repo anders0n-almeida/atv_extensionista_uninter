@@ -43,4 +43,24 @@ class NoticiasModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    // Métodos Customizados
+    public function get_news_info($id_noticia = '') {
+
+        $builder = $this->db->table('noticias AS n')
+                            ->select('
+                                n.*,
+                                u.usuario AS publicador
+                            ')
+                            ->join('usuarios AS u', 'u.id = n.publicado_por', 'inner')
+                            ->orderBy('n.data_publicacao', 'DESC');
+
+        if ($id_noticia) {
+            $builder->where('n.id', $id_noticia);
+            return $builder->get()->getRow();
+        }
+                            
+        return $builder->get()->getResult();
+
+    }
 }

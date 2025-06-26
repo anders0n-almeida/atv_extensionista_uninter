@@ -35,12 +35,12 @@ class Home extends BaseController
 
         }
 
-        $data = [
+        $dados = [
             'noticias_pag_inicial' => $noticias_pag_inicial,
             'noticia_destaque' => $noticia_destaque,
             'noticias_complementares' => $noticias_complementares,
         ];
 
-        return view('index', $data);
+        return view('index', $dados);
     }
 }
